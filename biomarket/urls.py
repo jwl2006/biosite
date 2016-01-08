@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/$', 'homepage.views.index', name='index'),
     url(r'^home/$', 'homepage.views.home', name='home'),
+    url(r'^pcr/$', 'homepage.views.polymerase', name='pcr'),
 ]
