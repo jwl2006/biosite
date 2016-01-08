@@ -1,8 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 15px;
+}
+th {
+    text-align: middle;
+}
 
+</style>
+</head>
 
-
+<body>
 {% block content %}
-
 
 
 
@@ -15,7 +29,30 @@
 
 {% endif %}
 
-{{ form }}
+<table>
+	<tr>
+		<th >seqNo</th>
+		<th>name</th>
+		<th>price</th>
+		<th>unit</th>
+		<th>category</th>
+		<th>factory</th>
+		<th>lifetime</th>
+		<th>pro_date</th>
+	</tr>
+	{% for item in form %}
+	<tr>
+		<td>{{ item.seqNo }}</td>
+		<td>{{ item.name }}</td>
+		<td>{{ item.price }}</td>
+		<td>{{ item.unit }}</td>
+		<td>{{ item.category }}</td>
+		<td>{{ item.factory }}</td>
+		<td>{{ item.lifetime }}</td>
+		<td>{{ item.pro_date }}</td>
+	</tr>
+	{% endfor %}
+</table>	
 
 <!-- <input class='btn btn-default' type='submit' value='Submit' /> -->
 <!-- <input type='text'>
@@ -23,4 +60,7 @@
 
 </div>
 </div>
+
 {% endblock %}
+</body>
+</html>

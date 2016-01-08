@@ -1,7 +1,7 @@
 from django import forms
 
 from .models import PCR_Polymerase
-
+from .models import BenchTop
 
 class PCR_PolymeraseForm(forms.ModelForm):
 	class Meta:
@@ -10,3 +10,4 @@ class PCR_PolymeraseForm(forms.ModelForm):
 	def get_product_name(self):
 		product_name = self.cleaned_data.get('name')
 		return product_name
+
